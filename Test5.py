@@ -8,7 +8,7 @@ from keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
 from keras.utils.np_utils import to_categorical
 from keras.callbacks import EarlyStopping
-data = pd.read_csv('C:/Users/sasibhusan.panda/Desktop/New_folder2/consumer_complaints/uci-news-aggregator.csv', usecols=['TITLE', 'CATEGORY'])
+data = pd.read_csv('../uci-news-aggregator.csv', usecols=['TITLE', 'CATEGORY'])
 data.CATEGORY.value_counts()
 num_of_categories = 45000
 shuffled = data.reindex(np.random.permutation(data.index))
